@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>17_SVG</title>
+            <style type="text/css">
+                *{
+                    margin: 0;
+                    padding: 0;
+                }
+                svg{
+                    background: pink;
+                }
+                ellipse{
+                    transition: transform 2s;
+                    transform: scale(2);
+                }
+                ellipse:hover{
+                    transform: scale(1);
+                }
+                #example{
+                    animation-name: moviment;
+                    animation-duration: 5s;
+                    animation-timing-function: ease;
+                    animation-delay: 1s;
+                    animation-iteration-count: infinite;
+                }
+                @keyframes moviment{
+                    0%{transform: translate(400px, 100px); fill:red;}
+                    10%{transform: translate(400px, 140px); fill:blue;}
+                    40%{transform: translate(300px, 250px); fill:green;}
+                    80%{transform: translate(0px, 0px); fill:yellow;}
+                    100%{transform: translate(400px, 100px); fill:azure;}
+                }
+            </style>
+        </head>
+        <body>
+            <svg width="500" height="400" viewBox="0 0 500 400">
+                <g id="example">
+               <rect x="100" y ="0" width="100" height="300" fill="red" stroke="black" strpke-width="10"/>
+                <ellipse cx="200" cy="200" rx="100" ry="100" fill="blue"/>
+                    </g>
+            </svg>
+        </body>
+</html>
